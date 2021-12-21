@@ -4,7 +4,6 @@ import junit.framework.TestCase;
 
 public class FiltersControllerTest extends TestCase {
 
-    private FiltersController filtersController;
 
     public void testDepartureDateBeforeCurrentDate() throws Exception {
     }

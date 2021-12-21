@@ -9,12 +9,14 @@ import java.util.*;
 public class FiltersController {
 
 
-    public static void departureDateBeforeCurrentDate(final List<Flight> list) {
+    public static List<Flight> departureDateBeforeCurrentDate(final List<Flight> list) {
+        List<Flight> sortedList = new LinkedList<>();
         for (Flight dateTime : list) {
             if (dateTime.getSegments().get(0).getDepartureDate().isBefore(LocalDateTime.now())) {
-                System.out.println(" Departure to the current time : " + "\n" + dateTime);
+                sortedList.add(dateTime);
             }
         }
+        return sortedList;
     }
 
     public static void segmentsDateArrivalBeforeDateDeparture(final List<Flight> list) {
@@ -39,8 +41,8 @@ public class FiltersController {
                     dateTime.getSegments().get(dateTime.getSegments().size() - 1).getArrivalDate());
 
             if (flightCalculate.minus(segmentsCalculate).compareTo(Duration.ofHours(2)) > 0) {
+                sortedList.add(dateTime);
             }
-            sortedList.add(dateTime);
         }
         System.out.println();
         System.out.print(" Total time spent on earth that exceeds two hours : " + "\n" + sortedList);

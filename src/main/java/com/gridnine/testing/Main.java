@@ -7,7 +7,8 @@ public class Main {
 
         List<Flight> list = FlightBuilder.createFlights();
 
-        FiltersController.departureDateBeforeCurrentDate(list);
+        System.out.println("Departure to the current time : " +
+                "\n" + FiltersController.departureDateBeforeCurrentDate(list));
 
         FiltersController.segmentsDateArrivalBeforeDateDeparture(list);
 
