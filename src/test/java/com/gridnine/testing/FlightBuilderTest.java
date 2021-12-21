@@ -8,7 +8,5 @@ public class FlightBuilderTest extends TestCase {
         if (FlightBuilder.createFlights().isEmpty()){
             System.out.println("No flights!!!");
         }
-        System.out.println(FlightBuilder.createFlights());
-
     }
 }
