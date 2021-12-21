@@ -4,12 +4,14 @@ import junit.framework.TestCase;
 
 public class FiltersControllerTest extends TestCase {
 
-    public void testDepartureDateBeforeCurrentDate() {
+    private FiltersController filtersController;
+
+    public void testDepartureDateBeforeCurrentDate() throws Exception {
     }
 
-    public void testSegmentsDateArrivalBeforeDateDeparture() {
+    public void testSegmentsDateArrivalBeforeDateDeparture() throws Exception {
     }
 
-    public void testTransferOverTwoHour() {
+    public void testTransferOverTwoHour() throws Exception {
     }
 }
